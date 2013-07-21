@@ -1,0 +1,17 @@
+These examples are created by Pragmatic Test Labs and shared with the community for personal usage.
+
+
+They are created for demonstrating the use of components only.
+ 
+Pragmatic Test Labs will not any responsibility for any damage caused by using these examples directly or indirectly.
+
+We shared these examples with the community for making the tool popular and help beginners to understand the usages of various components.
+
+
+
+Thank You 
+Team - Pragmatic Test Labs
+
+
+
+<< Simplicity into software testing >>

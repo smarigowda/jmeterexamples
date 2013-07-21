@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="2.2">
+  <hashTree>
+    <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="BeanShell PreProcessor" enabled="true">
+      <stringProp name="filename"></stringProp>
+      <stringProp name="parameters"></stringProp>
+      <boolProp name="resetInterpreter">false</boolProp>
+      <stringProp name="script">import org.apache.jmeter.threads.JMeterVariables;
+
+//Dem use of log 
+log.error(&quot;CUSTOM ERROR Current Time is &quot;);
+log.info(&quot;CUSTOM INFO log &quot;);
+
+//Use of variable ctx
+//See available methods in http://jmeter.apache.org/api/org/apache/jmeter/threads/JMeterContext.html
+System.out.println (&quot; getThreadNum() &quot; + ctx.getThreadNum() );
+JMeterVariables jmVariables=ctx.getVariables();
+System.out.println(&quot; jmVariables   &quot; +  jmVariables.get(&quot;START.HMS&quot;));
+System.out.println(&quot;Now &quot; + ${__time(HHmmss,CurrentTime)}  );
+
+
+//prev
+System.out.println(&quot; prev.getResponseMessage()&quot; + prev.getResponseMessage());
+System.out.println(&quot; prev.getSampleLabel() &quot; + prev.getSampleLabel() );
+
+// Use of sampler
+// http://jmeter.apache.org/api/org/apache/jmeter/samplers/Sampler.html
+//http://jmeter.apache.org/api/org/apache/jmeter/protocol/http/sampler/HTTPSampler.html
+
+System.out.println(&quot;sampler.getProtocol()&quot; +sampler.getProtocol());
+System.out.println(&quot;sampler.getPort()&quot; +sampler.getPort());
+System.out.println(&quot;sampler.getPort()&quot; +sampler.getPort());
+System.out.println(&quot;sampler.getPort()&quot; +sampler.getPostBodyRaw());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</stringProp>
+      <stringProp name="TestPlan.comments">Test comment </stringProp>
+    </BeanShellPreProcessor>
+    <hashTree/>
+  </hashTree>
+</jmeterTestPlan>
